@@ -1,0 +1,49 @@
+@CHARSET "UTF-8";
+
+/*右部区域*/
+.Rightcontent{
+	float:right;
+	margin-right:15px;
+	background-color:#EEEEEE;
+	height:430px;
+	width:280px;
+}
+.RightTopcontent{
+	float:top;
+	background-color:#8A8A8A;
+	height:243px;
+	width:280px;
+}
+/*事先隐藏本按钮，管理员登录后再显示！！*/
+.RightTopcontent button{
+	display:none;
+	position:absolute;
+	margin-left:215px;
+	margin-top:-50px;
+}
+#RightTopcontent-TextScroll{
+	width:280px;
+}
+
+/*  修改公告   的模态框样式高度*/
+#Annotextarea{
+	height:100px;
+}
+
+
+/*右下区域!*/
+.RightButtomcontent{
+	float:Buttom;
+	background-color:#FFFFFF;
+	height:auto;
+	width:280px;
+}
+/*轮播图片的尺寸自适应*/
+.carousel-item img{
+	max-width:100%;
+	height:auto%;
+}
+/*轮播上的小箭头颜色*/
+.carousel-control-next-icon,.carousel-control-prev-icon{
+	background-color:black;
+}

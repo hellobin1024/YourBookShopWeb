@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="package1" extends="json-default,struts-default">
+		
+	
+		<!-- 登录的action -->
+		
+		<action name="Login" class="ExecuteDo.dologin">
+			<result name="fail">MainPart.jsp</result>
+			<!-- 指明返回类型，同时需要注意success，可以查阅param等属性含义 -->
+			<!-- 此处返回json数据 -->
+			<result name="success" type="json">
+				<param name="root">result</param>
+			</result>
+		</action>
+		
+		
+		<!-- 退出登录，清除session -->
+		<action name="exitLogin" class="ExecuteDo.dologin" method="exitLogin">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+                <param name="inputName">yes</param>
+            </result>
+		</action>
+		
+		<!-- 注册的action -->
+		
+		<action name="Register" class="ExecuteDo.doregister" >
+		<!-- 指明返回类型，同时需要注意success，可以查阅param等属性含义 -->
+		<!-- 此处返回Stream流数据 -->
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+                <param name="inputName">is</param>
+				
+			</result>
+		</action>
+		
+		<!-- 忘记密码时验证用户名的action -->
+		<action name="FindPwd" class="ExecuteDo.doregister" method="FindPassWord">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+                <param name="inputName">rresult</param>
+			</result>
+			<result name="error" type="stream">
+				<param name="contentType">text/html</param>
+                <param name="inputName">rresult</param>
+			</result>
+		</action>
+		
+		<!-- 忘记密码时  验证密保，新密码  的action -->
+		<action name="ChangePwd" class="ExecuteDo.doregister" method="ChangePassWord">
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+                <param name="inputName">rresult2</param>
+			</result>
+		</action>
+		
+		<!-- 获取公告的action -->
+		
+		<action name="Announ" class="ExecuteDo.doGetAnnounce" >
+		<!-- 指明返回类型，同时需要注意success，可以查阅param等属性含义 -->
+		<!-- 此处返回Stream流数据 -->
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+                <param name="inputName">cc</param>
+				
+			</result>
+		</action>
+		
+		<!-- 更新公告的action -->
+		
+		<action name="AddAnno" class="ExecuteDo.doAddAnnounce" >
+		<!-- 指明返回类型，同时需要注意success，可以查阅param等属性含义 -->
+		<!-- 此处返回Stream流数据 -->
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+                <param name="inputName">ssst</param>
+			</result>
+		</action>
+		
+		
+		
+	</package>
+	
+</struts>    

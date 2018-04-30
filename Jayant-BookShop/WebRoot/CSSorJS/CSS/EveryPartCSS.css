@@ -1,0 +1,103 @@
+@CHARSET "UTF-8";
+#container-fluid{
+	clear:both;
+	width:1050px;
+}
+
+/*全局图片样式*/
+img{
+ 	max-width:80%; 
+ 	max-height:80%;
+}
+
+/*注册页面的表单区域*/
+#RegisterForm{
+	margin-left:65px;
+	margin-top:30px;
+	margin-bottom:30px;
+	width:900px;
+}
+/*注册页面表单区域的提示文字*/
+#RegisterForm .text-muted{
+	margin-top:9px;
+}
+
+/*找回密码的表单样式*/
+#FindPwdForm{
+	margin-top:30px;
+	margin-bottom:20px;
+	margin-left:250px;
+	width:500px;
+}
+
+/*首页左侧区域*/
+.Leftcontent{
+	float:left;
+	background-color:#F4A460;
+	margin-left:-15px;
+	height:430px;
+	width:770px;
+}
+/*左侧区域的各功能块---采用浮动布局并且相互设置间距*/
+/*全部图书*/
+.AllBook{
+	float:left;
+	width:170px;
+	height:170px;
+	margin-top:30px;
+	margin-left:50px;
+	display:inline;
+	border-radius:25% 10%;
+	background:rgba(0,0,0,0.2);
+	background-color:#8a8a8a;
+}
+
+/*信息论坛*/
+.messagecomm{
+	float:left;
+	width:170px;
+	height:170px;
+	margin-top:30px;
+	margin-left:50px;
+	display:inline;
+	border-radius:10% 25%;
+	background:rgba(0,0,0,0.2);
+	background-color:#8a8a8a;
+	
+}
+/*娱乐中心*/
+.enjoyself{
+	float:left;
+	width:170px;
+	height:170px;
+	margin-top:30px;
+	margin-left:50px;
+	display:inline;
+	border-radius:25% 10%;
+	background:rgba(0,0,0,0.2);
+	background-color:#8a8a8a;
+}
+/*个人设置*/
+.InfoSetting{
+	float:left;
+	width:170px;
+	height:170px;
+	margin-top:30px;
+	margin-left:50px;
+	display:inline;
+	border-radius:10% 25%;
+	background:rgba(0,0,0,0.2);
+	background-color:#8a8a8a;
+}
+/*管理员设置中心*/
+.mgcontrol{
+	float:left;
+	width:170px;
+	height:170px;
+	margin-top:30px;
+	margin-left:50px;
+	display:inline;
+	border-radius:25% 10%;
+	background:rgba(0,0,0,0.2);
+	background-color:#8a8a8a;
+}

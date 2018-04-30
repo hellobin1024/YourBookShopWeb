@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+/*头部*/
+#header{
+	height:45px;
+	background-color:#000000;
+}
+/*头部搜索框样式*/
+.HeaderSearch{
+	position:relative;
+	margin-top:-35px;
+	margin-left:420px;
+}
+/*头部我是用户*/
+.btn-group{
+	position:relative;
+	margin-top:-39px;
+	margin-left:460px;
+}
+/*头部我是用户下拉部分*/
+#dropdown-menu-header{
+	padding:0px;
+	min-width:100%;
+}
+#dropdown-menu-header a{
+	padding:0px;
+}
+
+/*登录成功后的按钮*/
+#MyHomeDiv{
+	display:none;
+	position:relative;
+	margin-top:-38px;
+	margin-left:850px;
+}
+#MyHomeBtn{
+	margin-left:5px;
+}
+
