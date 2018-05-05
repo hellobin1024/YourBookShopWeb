@@ -22,6 +22,7 @@
 		</property>
 		<mapping class="HibernatePack.Userinfo" />
 		<mapping class="HibernatePack.Announceinfo" />
+		<mapping class="HibernatePack.PythonbookCopy" />
 	</session-factory>
 
 </hibernate-configuration>

@@ -3,7 +3,14 @@
 
 <struts>
 	<package name="package1" extends="json-default,struts-default">
-		
+		<!-- 定义的拦截器 -->
+		<interceptors>
+			<interceptor name="auth" class="ExecuteDo.doCheckLogin"></interceptor>	
+			<interceptor-stack name="authStack">
+				<interceptor-ref name="auth"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
 	
 		<!-- 登录的action -->
 		
@@ -80,7 +87,48 @@
 			</result>
 		</action>
 		
+		<!-- 寻找图书总页数的action -->
+		<action name="FindBook" class="ExecuteDo.doFindBook">
+			<!-- 返回Json数据 -->
+			<result name="success" type="stream">
+				<param name="contentType">text/html</param>
+                <param name="inputName">bookSum</param>
+			</result>
+		</action>
 		
+		<!-- 寻找当前某一页的数据的action -->
+		<action name="FindCurrentPage" class="ExecuteDo.doFindBook" method="FindCurrentPageBook">
+			<!-- 返回Json数据 -->
+			<result name="success" type="json">bbbbooklist</result>
+		</action>
+		
+		<!-- 后端验证登陆给予各个活动 的action-->
+		<action name="checklogin">
+			<!-- 验证登陆,如果登录过的，跳转下载数据的downloadbook.action -->
+			<result name="truebook" type="chain">
+				<param name="actionName">downloadbook</param>
+			</result>
+			<!-- 验证未登录则返回登录界面~ -->
+			<result>/MainPart.jsp</result>
+			<!-- 映射拦截器 -->
+			<interceptor-ref name="authStack"></interceptor-ref>
+		</action>
+		
+		<!-- 下载书籍的action -->
+		<action name="downloadbook" class="ExecuteDo.dodownloadbook">
+			<result name="success" type="stream">
+				<!-- 返回的流名字 -->
+				<param name="inputName">bookfile</param>
+				<!-- 通知以附件的形式文件;filename是文件名 -->
+				<param name="contentDisposition">attachment;filename=${filename}</param>
+				<!-- 文件类型;前者表示，不限定文件类型;后者表示编码形式 -->
+				<param name="contentType">
+      						application/octet-stream;charset=ISO8859-1
+     			</param>
+     			<!-- 缓冲区大小 -->
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
 		
 	</package>
 	

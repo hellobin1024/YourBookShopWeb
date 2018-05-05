@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+/*头部*/
+#header{
+	height:35px;
+	background-color:#000000;
+}
+/*分类导航栏部分*/
+.jumbotron{
+	padding:0;
+	margin:0 auto;
+	height:auto;
+	/*单独设置父元素透明度*/
+	background: rgba(0,0,0,0.5)。
+}
+.container{
+	float:left;
+}
+/*--用于清除浮动，让父元素高度可以自适应*/
+.clear{
+	clear:both;
+}
+.contain{
+	position:relative;
+	width:1000px;
+	margin:0 auto;
+	height:auto;
+	margin-top:5px;
+}
+/*令书籍显示内容的高度自适应~*/
+#BookContainShow{
+	height:auto;
+}
+/*设置书籍显示时的高和宽*/
+.BookPicSize{
+	height:136px;
+	width:108px;
+}
+/*分页栏*/
+#pagination{
+	position:relative;
+	display:none;
+	margin:0 auto;
+}
+/*分页栏的介绍文字*/
+#PageCenterStr{
+	margin-top:6px;
+}
